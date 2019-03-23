@@ -109,3 +109,24 @@ int opendoor( int car_here, int first_choice )
 		}
 }
 
+
+// Calculates Second Choice if contestant makes it in the game and return the same choice made
+int makeSecondChoice( int opened_door, int first_choice )
+{
+	while(1)
+		{
+			int temp = randnum(); // Generates random number and compares to the Opened Door and First Choice, for every random number generated
+			if ((temp == opened_door) || (temp == first_choice))
+				temp = randnum();
+			else
+			{
+				return temp;
+				break;
+
+			}
+
+		}
+}
+
+
+
